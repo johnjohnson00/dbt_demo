@@ -1,15 +1,15 @@
-with 
-cities as (
-    select * from {{source('tech_store','city')}}
+WITH
+CITIES AS (
+    SELECT * FROM {{source('tech_store','city')}}
 ),
 
-final as (
-    select 
-        id as city_id,
-        name as city_name,
-        stateid as state_id,
-        zipid as zip_code_id
-    from cities
+FINAL AS (
+    SELECT
+        ID AS CITY_ID,
+        NAME AS CITY_NAME,
+        STATEID AS STATE_ID,
+        ZIPID AS ZIP_CODE_ID
+    FROM CITIES
 )
 
-select * from final
+SELECT * FROM FINAL
