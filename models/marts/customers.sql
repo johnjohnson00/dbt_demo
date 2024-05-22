@@ -40,8 +40,7 @@ FINAL AS (
         {{utc_to_est('customers.created_at')}} AS CREATED_AT_EST,
         CUSTOMERS.UPDATED_AT,
         {{utc_to_est('customers.updated_at')}} AS UPDATED_AT_EST,
-        CUSTOMERS.IS_ACTIVE,
-        "test" AS COLUMN
+        CUSTOMERS.IS_ACTIVE
 
     FROM CUSTOMERS
 
